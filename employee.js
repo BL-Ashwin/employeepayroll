@@ -1,15 +1,35 @@
 class EmployeePayroll {
-    constructor(message) {
-        this.message = message; // store the message in a property
-    }
-
-    displayMessage() {
-        console.log(this.message); // use 'this' to access the message
-    }
+  // Constructor to initialize employee details
+  constructor(empId, empName) {
+    this.empId = empId;
+    this.empName = empName;
+    this.attendance = "";
+  }
+  displayMessage() {
+    console.log("Welcome to Employee Payroll Application");
+  }
+  // Method to mark attendance randomly
+  markAttendance() {
+    let isPresent = Math.floor(Math.random() * 2);
+    this.attendance = isPresent ? "Present" : "Absent";
+  }
+  // method to display employee details
+  displayDetails() {
+    console.log(
+      `Employee ID: ${this.empId}, Name: ${this.empName}, Attendance: ${this.attendance}`
+    );
+  }
 }
-
-// Create an instance with a message
-const employee = new EmployeePayroll("Welcome to employee");
-
-// Call the method to display the message
-employee.displayMessage();
+const employeePayroll = new EmployeePayroll();
+employeePayroll.displayMessage();
+//create employee objects
+let empDetails = [
+  new EmployeePayroll(11, "Ashwin"),
+  new EmployeePayroll(41, "Kural"),
+  new EmployeePayroll(12, "Chandana"),
+];
+// Mark attendance for each employee and display their details
+empDetails.forEach((employee) => {
+  employee.markAttendance();
+  employee.displayDetails();
+});
