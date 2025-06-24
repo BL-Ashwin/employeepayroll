@@ -61,9 +61,9 @@ const employeePayroll = new EmployeePayroll();
 employeePayroll.displayMessage();
 //create employee objects
 let empDetails = [
-  new EmployeePayroll(11, "Kural"),
-  new EmployeePayroll(41, "Deepak"),
-  new EmployeePayroll(12, "manoj"),
+  new EmployeePayroll(11, "Ashwin"),
+  new EmployeePayroll(41, "Kural"),
+  new EmployeePayroll(12, "Chandhana"),
 ];
 const Working_Days = 20; // Assuming 20 working days in a month
 
